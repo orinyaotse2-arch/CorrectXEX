@@ -3,588 +3,694 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="XEX — Future Wear. Premium streetwear. Limited drops.">
-<title>XEX</title>
+<meta name="description" content="XEX Extra Xone — Premium streetwear. Bold design, limited drops. Shop SS26.">
+<title>XEX — Extra Xone</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Tenor+Sans&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="cursor"></div>
-<div id="cursor-ring"></div>
+<div id="cursor-trail"></div>
 
-<!-- ▓▓ NAV ▓▓ -->
+<!-- ═══════════════════════════════════════
+     ABOUT MODAL
+═══════════════════════════════════════ -->
+<div id="about-modal" class="modal" role="dialog" aria-modal="true" aria-label="About XEX">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-panel">
+    <button class="modal-close" id="modal-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-body">
+      <p class="modal-eyebrow">About the Brand</p>
+      <h2 class="modal-title">XEX Extra Xone</h2>
+      <p class="modal-sub">Unleash Your Extra Edge</p>
+      <div class="modal-divider"></div>
+      <div class="modal-text">
+        <p>XEX Extra Xone is a fresh and dynamic brand designed to bring you the ultimate experience in style and innovation. With a focus on quality and uniqueness, XEX Extra Echo Xone stands out by offering products that combine cutting-edge design with everyday functionality. Whether you're looking for something bold or subtle, this brand promises to deliver excellence and a touch of extra flair to your lifestyle. Perfect for those who want to express themselves confidently and stand apart from the crowd.</p>
+        <p>XEX Extra Xone is more than just a brand; it's a lifestyle choice for those who crave something extraordinary. It blends modern aesthetics with high performance, creating products that not only look great but also deliver on durability and functionality. From fashion to tech accessories and music record, XEX Extra Xone is crafted to meet the needs of trendsetters and innovators alike. The brand's mission is to push boundaries, encouraging people to embrace their uniqueness and live boldly. With a commitment to sustainability and quality, XEX Extra Echo Xone is set to become a leader in its industry, offering customers a fresh perspective on what it means to be truly Xtra ordinary original.</p>
+      </div>
+      <div class="modal-stats">
+        <div class="mstat">
+          <strong>SS26</strong><span>Current Season</span>
+        </div>
+        <div class="mstat">
+          <strong>Lagos</strong><span>Origin</span>
+        </div>
+        <div class="mstat">
+          <strong>Limited</strong><span>Every Drop</span>
+        </div>
+      </div>
+      <a href="https://instagram.com/xtraechoxone2026" target="_blank" rel="noopener noreferrer" class="modal-ig">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @xtraechoxone2026
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ANNOUNCEMENT BAR
+═══════════════════════════════════════ -->
+<div class="announce-bar">
+  <div class="announce-track">
+    <span>SS26 Drop — Live Now</span>
+    <span class="adot">◆</span>
+    <span>Free Shipping on Orders Over ₦50,000</span>
+    <span class="adot">◆</span>
+    <span>Limited Stock — No Restocks</span>
+    <span class="adot">◆</span>
+    <span>SS26 Drop — Live Now</span>
+    <span class="adot">◆</span>
+    <span>Free Shipping on Orders Over ₦50,000</span>
+    <span class="adot">◆</span>
+    <span>Limited Stock — No Restocks</span>
+    <span class="adot">◆</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HEADER / NAV
+═══════════════════════════════════════ -->
 <header id="header">
-  <nav>
+  <nav class="nav-inner">
 
-    <!-- ═══════════════════════════════════
-         XEX WORDMARK — Bold filled SVG
-         Three letters, custom geometry:
-         X·E·X with gold fill + subtle mark
-    ═══════════════════════════════════════ -->
-    <a href="#" class="wordmark" aria-label="XEX Home">
-      <svg class="wm-svg" viewBox="0 0 210 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- NAV LEFT -->
+    <div class="nav-left">
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#collections" class="nav-link">Collections</a>
+    </div>
+
+    <!-- LOGO — CENTRE -->
+    <a href="#" class="logo" aria-label="XEX Home">
+      <svg class="logo-svg" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <!-- Primary gold gradient — metallic left-to-right -->
-          <linearGradient id="gA" x1="0" y1="0" x2="210" y2="0" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stop-color="#b8912a"/>
-            <stop offset="30%"  stop-color="#e8cc6a"/>
-            <stop offset="55%"  stop-color="#d4af37"/>
-            <stop offset="80%"  stop-color="#f0d878"/>
-            <stop offset="100%" stop-color="#b8912a"/>
+          <linearGradient id="lg1" x1="0" y1="0" x2="180" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#c49a22"/>
+            <stop offset="35%"  stop-color="#f0d060"/>
+            <stop offset="60%"  stop-color="#d4af37"/>
+            <stop offset="85%"  stop-color="#edd060"/>
+            <stop offset="100%" stop-color="#c49a22"/>
           </linearGradient>
-          <!-- Hover: brighter champagne -->
-          <linearGradient id="gB" x1="0" y1="0" x2="210" y2="0" gradientUnits="userSpaceOnUse">
+          <linearGradient id="lg2" x1="0" y1="0" x2="180" y2="0" gradientUnits="userSpaceOnUse">
             <stop offset="0%"   stop-color="#d4af37"/>
-            <stop offset="40%"  stop-color="#f8eaaa"/>
-            <stop offset="70%"  stop-color="#e8cc6a"/>
+            <stop offset="45%"  stop-color="#fff5c0"/>
             <stop offset="100%" stop-color="#d4af37"/>
           </linearGradient>
         </defs>
 
-        <!--
-          LETTER GEOMETRY — all letters are filled paths
-          drawn on a 48-unit cap height grid.
-          Each letter is 52px wide with 8px gap between.
-          X: two thick diagonal bars crossing at centre
-          E: vertical stem + 3 horizontal bars
-          X: same as first X (brand symmetry)
+        <!-- ▌X — left letter (0–46px) ▐ -->
+        <!-- Top-left → bottom-right bar -->
+        <polygon points="0,0  14,0  46,52  32,52"  class="lf"/>
+        <!-- Top-right → bottom-left bar -->
+        <polygon points="32,0  46,0  14,52  0,52"  class="lf"/>
+        <!-- Central void — keeps intersection clean -->
+        <polygon points="19,24 23,19 27,24 23,29"  class="lv"/>
 
-          Stroke weight: 10px (fills, not strokes)
-          All corners: sharp / butt caps = fashion-grade geometry
-        -->
+        <!-- ▌E — centre letter (56–110px) ▐ -->
+        <rect x="56" y="0"  width="11" height="52" class="lf"/><!-- stem -->
+        <rect x="56" y="0"  width="54" height="11" class="lf"/><!-- top bar -->
+        <rect x="56" y="21" width="40" height="10" class="lf"/><!-- mid bar (shorter = tension) -->
+        <rect x="56" y="41" width="54" height="11" class="lf"/><!-- bottom bar -->
 
-        <!-- ════ X (LEFT) — x: 0–52 ════ -->
-        <!-- Diagonal top-left to bottom-right: thick parallelogram fill -->
-        <polygon points="0,0 12,0 52,48 40,48"           class="wm-fill"/>
-        <!-- Diagonal top-right to bottom-left -->
-        <polygon points="40,0 52,0 12,48 0,48"            class="wm-fill"/>
-        <!-- White knockout diamond at centre crossover (creates clean intersection) -->
-        <polygon points="22,22 26,18 30,22 26,26"         fill="#050403" class="wm-knockout"/>
+        <!-- ▌X — right letter (120–166px) ▐ -->
+        <polygon points="120,0  134,0  166,52  152,52" class="lf"/>
+        <polygon points="152,0  166,0  134,52  120,52" class="lf"/>
+        <polygon points="139,24 143,19 147,24 143,29"  class="lv"/>
 
-        <!-- ════ E (CENTRE) — x: 63–115 ════ -->
-        <!-- Vertical stem -->
-        <rect x="63"  y="0"  width="10" height="48"       class="wm-fill"/>
-        <!-- Top bar -->
-        <rect x="63"  y="0"  width="52" height="10"       class="wm-fill"/>
-        <!-- Mid bar — 80% width, vertically centred, slightly thinner -->
-        <rect x="63"  y="20" width="42" height="8"        class="wm-fill"/>
-        <!-- Bottom bar -->
-        <rect x="63"  y="38" width="52" height="10"       class="wm-fill"/>
-
-        <!-- ════ X (RIGHT) — x: 126–178 ════ -->
-        <polygon points="126,0 138,0 178,48 166,48"       class="wm-fill"/>
-        <polygon points="166,0 178,0 138,48 126,48"       class="wm-fill"/>
-        <!-- Knockout diamond -->
-        <polygon points="148,22 152,18 156,22 152,26"     fill="#050403" class="wm-knockout"/>
-
-        <!-- ════ Micro detail: registered dot + EST mark ════ -->
-        <!-- Tiny ® circle, top-right of final X -->
-        <circle cx="183" cy="6"  r="4.5" class="wm-mark" stroke-width="0.9" fill="none"/>
-        <text   x="183"  y="8.8" text-anchor="middle" font-family="Montserrat,sans-serif"
-                font-size="4.8" font-weight="400" class="wm-mark-text">R</text>
-
-        <!-- EST rule beneath — very faint -->
-        <line x1="126" y1="48" x2="178" y2="48" class="wm-rule" stroke-width="0.6"/>
-        <text x="152"  y="48" dy="8" text-anchor="middle" font-family="Montserrat,sans-serif"
-              font-size="4.5" font-weight="200" letter-spacing="3" class="wm-sub">EST · 2023</text>
+        <!-- Micro ® mark -->
+        <circle cx="172" cy="7" r="5" class="lm" stroke-width="0.9" fill="none"/>
+        <text x="172" y="9.8" text-anchor="middle" font-family="Inter,sans-serif"
+              font-size="5" font-weight="500" class="lmt">R</text>
       </svg>
     </a>
-    <!-- ══════════════════════════════════ -->
 
+    <!-- NAV RIGHT -->
     <div class="nav-right">
-      <a href="#" class="nav-link">Collections</a>
-      <a href="#" class="nav-link">About</a>
-      <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="nav-cta">Shop Now</a>
+      <button class="nav-link" id="about-trigger">About</button>
+      <a href="https://instagram.com/xtraechoxone2026" target="_blank" rel="noopener noreferrer" class="nav-link nav-ig">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="#shop" class="nav-shop-btn">Shop Now</a>
     </div>
   </nav>
 </header>
 
-<!-- ▓▓ HERO ▓▓ -->
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
 <section id="hero">
-  <div class="hero-bg">
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-lines">
-      <div class="hline"></div><div class="hline"></div>
-      <div class="hline"></div><div class="hline"></div>
+  <!-- Ambient background elements -->
+  <div class="hero-orb o1"></div>
+  <div class="hero-orb o2"></div>
+  <div class="hero-vlines">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="hero-body">
+    <div class="hero-left">
+      <p class="hero-kicker reveal">Spring / Summer 2026 — System Zero</p>
+
+      <h1 class="hero-title">
+        <span class="ht reveal">Wear</span>
+        <span class="ht ht-outline reveal rd1">The</span>
+        <span class="ht reveal rd2">Future.</span>
+      </h1>
+
+      <p class="hero-desc reveal rd3">Garments engineered at the edge of silence.<br>Pieces that refuse to speak — yet say everything.</p>
+
+      <div class="hero-ctas reveal rd4">
+        <a href="#shop" class="cta-fill">
+          <span>Shop SS26</span>
+          <svg viewBox="0 0 18 18" fill="none" width="14" height="14"><path d="M3 9h12M9 3l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#collections" class="cta-ghost">Explore Collections</a>
+      </div>
+
+      <div class="hero-trust reveal rd4">
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="none" width="14" height="14"><path d="M10 2L2 7v6c0 4 8 5 8 5s8-1 8-5V7L10 2z" stroke="#d4af37" stroke-width="1.2"/></svg>
+          <span>Authentic quality</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="none" width="14" height="14"><path d="M10 18s-7-4.35-7-9A7 7 0 0117 9c0 4.65-7 9-7 9z" stroke="#d4af37" stroke-width="1.2"/></svg>
+          <span>Ships Nigeria-wide</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="none" width="14" height="14"><path d="M3 10l5 5 9-9" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Limited drops only</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero visual — styled product placeholder -->
+    <div class="hero-right reveal rd2">
+      <div class="hero-img-wrap">
+        <div class="hero-img-placeholder">
+          <!-- Large abstract garment silhouette -->
+          <svg viewBox="0 0 340 480" fill="none" class="hero-garment">
+            <defs>
+              <linearGradient id="hg" x1="0" y1="0" x2="340" y2="480" gradientUnits="userSpaceOnUse">
+                <stop offset="0%"  stop-color="#2a2010"/>
+                <stop offset="60%" stop-color="#181008"/>
+                <stop offset="100%" stop-color="#0c0804"/>
+              </linearGradient>
+              <linearGradient id="hs" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+                <stop offset="0%"   stop-color="rgba(212,175,55,0.22)"/>
+                <stop offset="50%"  stop-color="rgba(212,175,55,0.04)"/>
+                <stop offset="100%" stop-color="rgba(212,175,55,0)"/>
+              </linearGradient>
+              <linearGradient id="hgv" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+                <stop offset="0%"   stop-color="rgba(212,175,55,0)"/>
+                <stop offset="50%"  stop-color="rgba(212,175,55,0.9)"/>
+                <stop offset="100%" stop-color="rgba(212,175,55,0)"/>
+              </linearGradient>
+              <filter id="hsh"><feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="rgba(0,0,0,0.95)"/></filter>
+              <filter id="hgl"><feGaussianBlur stdDeviation="4"/></filter>
+            </defs>
+            <!-- Body -->
+            <path d="M 125 48 Q 148 32 170 30 Q 192 32 215 48 L 268 90 L 282 430 L 58 430 L 72 90 Z"
+                  fill="url(#hg)" stroke="rgba(212,175,55,0.28)" stroke-width="1" filter="url(#hsh)"/>
+            <!-- Sheen -->
+            <path d="M 125 48 Q 142 40 162 38 L 162 430 L 58 430 L 72 90 Z" fill="url(#hs)"/>
+            <!-- Hood -->
+            <path d="M 144 50 Q 155 14 170 12 Q 185 14 196 50 Q 186 44 170 43 Q 154 44 144 50 Z"
+                  fill="#1a1208" stroke="rgba(212,175,55,0.2)" stroke-width="0.8"/>
+            <ellipse cx="170" cy="42" rx="13" ry="15" fill="rgba(0,0,0,0.55)"/>
+            <!-- L sleeve -->
+            <path d="M 125 62 L 32 200 L 25 340 L 65 348 L 72 212 L 125 116 Z"
+                  fill="url(#hg)" stroke="rgba(212,175,55,0.15)" stroke-width="0.8"/>
+            <!-- R sleeve -->
+            <path d="M 215 62 L 308 200 L 315 340 L 275 348 L 268 212 L 215 116 Z"
+                  fill="url(#hg)" stroke="rgba(212,175,55,0.15)" stroke-width="0.8"/>
+            <!-- Drawstring -->
+            <path d="M 152 52 Q 161 68 170 70 Q 179 68 188 52" stroke="rgba(212,175,55,0.45)" stroke-width="1.2" fill="none"/>
+            <!-- Kangaroo pocket -->
+            <path d="M 94 258 Q 94 300 170 302 Q 246 300 246 258" stroke="rgba(212,175,55,0.15)" stroke-width="1" fill="none"/>
+            <!-- Centre seam -->
+            <line x1="170" y1="52" x2="170" y2="430" stroke="rgba(212,175,55,0.08)" stroke-width="0.8" stroke-dasharray="6 10"/>
+            <!-- Construction lines -->
+            <line x1="72" y1="192" x2="268" y2="192" stroke="rgba(212,175,55,0.18)" stroke-width="0.6"/>
+            <line x1="72" y1="320" x2="268" y2="320" stroke="rgba(212,175,55,0.08)" stroke-width="0.6"/>
+            <!-- XEX chest mark -->
+            <text x="170" y="374" text-anchor="middle" font-family="Bebas Neue,sans-serif"
+                  font-size="22" fill="rgba(212,175,55,0.12)" letter-spacing="12">XEX</text>
+            <!-- Gold top pin -->
+            <line x1="170" y1="26" x2="170" y2="46" stroke="url(#hgv)" stroke-width="1.5"/>
+            <circle cx="170" cy="24" r="3" fill="#d4af37"/>
+            <circle cx="170" cy="24" r="7" fill="rgba(212,175,55,0.15)" filter="url(#hgl)"/>
+          </svg>
+          <div class="hero-img-label">System Zero — XEX-001</div>
+        </div>
+        <!-- Floating tags -->
+        <div class="float-tag ft-top">SS26</div>
+        <div class="float-tag ft-side">New Arrival</div>
+      </div>
     </div>
   </div>
 
-  <div class="hero-content">
-    <p class="hero-season">Spring — Summer 2026</p>
-    <h1 class="hero-heading">
-      <span class="h-line h-line-1"><em>Wear</em></span>
-      <span class="h-line h-line-2">the</span>
-      <span class="h-line h-line-3"><em>Future.</em></span>
-    </h1>
-    <p class="hero-sub">Garments engineered at the edge of silence.<br>Each piece refuses to speak — yet says everything.</p>
-    <div class="hero-actions">
-      <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="btn-primary">
-        <span>Explore SS26</span>
-        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#drops" class="btn-text">View Pieces</a>
-    </div>
-  </div>
-
-  <div class="hero-aside">
-    <div class="aside-tag">SS — 26</div>
-    <svg class="aside-garment" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="g1" x1="0" y1="0" x2="280" y2="420" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#2a2118"/>
-          <stop offset="50%" stop-color="#1a1408"/>
-          <stop offset="100%" stop-color="#0d0a04"/>
-        </linearGradient>
-        <linearGradient id="gsheen" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="rgba(212,175,55,0.18)"/>
-          <stop offset="40%" stop-color="rgba(212,175,55,0.04)"/>
-          <stop offset="100%" stop-color="rgba(212,175,55,0)"/>
-        </linearGradient>
-        <linearGradient id="ggold" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="rgba(212,175,55,0)"/>
-          <stop offset="50%" stop-color="rgba(212,175,55,0.8)"/>
-          <stop offset="100%" stop-color="rgba(212,175,55,0)"/>
-        </linearGradient>
-        <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="rgba(0,0,0,0.95)"/></filter>
-      </defs>
-      <!-- Main body -->
-      <path d="M 105 42 Q 125 28 140 26 Q 155 28 175 42 L 218 78 L 228 370 L 52 370 L 62 78 Z" fill="url(#g1)" stroke="rgba(212,175,55,0.2)" stroke-width="0.8" filter="url(#shadow)"/>
-      <!-- Sheen -->
-      <path d="M 105 42 Q 118 36 135 34 L 135 370 L 52 370 L 62 78 Z" fill="url(#gsheen)"/>
-      <!-- Hood -->
-      <path d="M 122 44 Q 131 12 140 10 Q 149 12 158 44 Q 151 38 140 37 Q 129 38 122 44 Z" fill="#1a1408" stroke="rgba(212,175,55,0.15)" stroke-width="0.8"/>
-      <ellipse cx="140" cy="36" rx="11" ry="13" fill="rgba(0,0,0,0.5)"/>
-      <!-- Left sleeve -->
-      <path d="M 105 56 L 28 175 L 22 295 L 58 302 L 64 186 L 105 100 Z" fill="url(#g1)" stroke="rgba(212,175,55,0.12)" stroke-width="0.8"/>
-      <!-- Right sleeve -->
-      <path d="M 175 56 L 252 175 L 258 295 L 222 302 L 216 186 L 175 100 Z" fill="url(#g1)" stroke="rgba(212,175,55,0.12)" stroke-width="0.8"/>
-      <!-- Drawstring -->
-      <path d="M 126 46 Q 133 60 140 62 Q 147 60 154 46" stroke="rgba(212,175,55,0.35)" stroke-width="1" fill="none"/>
-      <!-- Seam center -->
-      <line x1="140" y1="44" x2="140" y2="370" stroke="rgba(212,175,55,0.08)" stroke-width="0.8" stroke-dasharray="5 9"/>
-      <!-- Horizontal construction -->
-      <line x1="62" y1="168" x2="218" y2="168" stroke="rgba(212,175,55,0.14)" stroke-width="0.6"/>
-      <line x1="62" y1="270" x2="218" y2="270" stroke="rgba(212,175,55,0.07)" stroke-width="0.6"/>
-      <!-- Kangaroo pocket curve -->
-      <path d="M 78 220 Q 78 255 140 257 Q 202 255 202 220" stroke="rgba(212,175,55,0.12)" stroke-width="0.8" fill="none"/>
-      <!-- XEX mark -->
-      <text x="140" y="320" text-anchor="middle" font-family="Playfair Display" font-size="18" fill="rgba(212,175,55,0.1)" letter-spacing="10">XEX</text>
-      <!-- Gold pin top -->
-      <line x1="140" y1="24" x2="140" y2="42" stroke="url(#ggold)" stroke-width="1"/>
-      <circle cx="140" cy="22" r="2.5" fill="#d4af37" filter="url(#glow)"/>
-      <!-- Measurement marks -->
-      <line x1="16" y1="168" x2="54" y2="168" stroke="rgba(212,175,55,0.25)" stroke-width="0.6"/>
-      <text x="8" y="172" font-family="Montserrat" font-size="6" fill="rgba(212,175,55,0.4)" letter-spacing="1">168</text>
-    </svg>
-    <div class="aside-label">System Zero Collection</div>
-  </div>
-
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
+  <div class="hero-scroll">
+    <div class="hs-line"></div>
     <span>Scroll</span>
   </div>
 </section>
 
-<!-- ▓▓ MARQUEE ▓▓ -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span>Free Shipping Over $250</span><span class="mx">◈</span>
-    <span>SS26 System Zero — Live Now</span><span class="mx">◈</span>
-    <span>Limited Production</span><span class="mx">◈</span>
-    <span>No Restocks — Ever</span><span class="mx">◈</span>
-    <span>Crafted in Portugal</span><span class="mx">◈</span>
-    <span>Drop 002 Coming Soon</span><span class="mx">◈</span>
-    <span>Free Shipping Over $250</span><span class="mx">◈</span>
-    <span>SS26 System Zero — Live Now</span><span class="mx">◈</span>
-    <span>Limited Production</span><span class="mx">◈</span>
-    <span>No Restocks — Ever</span><span class="mx">◈</span>
-    <span>Crafted in Portugal</span><span class="mx">◈</span>
-    <span>Drop 002 Coming Soon</span><span class="mx">◈</span>
+<!-- ═══════════════════════════════════════
+     MARQUEE
+═══════════════════════════════════════ -->
+<div class="marquee">
+  <div class="marquee-inner">
+    <span>Free Shipping Over ₦50,000</span><b>◆</b>
+    <span>SS26 — System Zero Drop</span><b>◆</b>
+    <span>No Restocks — Ever</span><b>◆</b>
+    <span>Crafted for Trendsetters</span><b>◆</b>
+    <span>Authentic XEX Quality</span><b>◆</b>
+    <span>Free Shipping Over ₦50,000</span><b>◆</b>
+    <span>SS26 — System Zero Drop</span><b>◆</b>
+    <span>No Restocks — Ever</span><b>◆</b>
+    <span>Crafted for Trendsetters</span><b>◆</b>
+    <span>Authentic XEX Quality</span><b>◆</b>
   </div>
 </div>
 
-<!-- ▓▓ DROPS ▓▓ -->
-<section id="drops">
-  <div class="section-intro reveal">
-    <div class="section-label">Latest Drop</div>
-    <h2 class="section-heading">SS26 Pieces</h2>
-    <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="section-more">
-      View All
-      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
-    </a>
+<!-- ═══════════════════════════════════════
+     SHOP / PRODUCTS
+═══════════════════════════════════════ -->
+<section id="shop">
+  <div class="shop-header reveal">
+    <div>
+      <p class="sh-label">Latest Drop</p>
+      <h2 class="sh-title">SS26 — System Zero</h2>
+    </div>
+    <p class="sh-note">All pieces are limited. No restocks.</p>
   </div>
 
-  <div class="product-grid">
+  <div class="shop-grid">
 
-    <!-- CARD 1 — hero -->
-    <article class="pcard pcard-large reveal">
-      <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="pcard-link" aria-label="Buy Void Jacket">
-        <div class="pcard-img">
-          <div class="pcard-glow"></div>
-          <svg viewBox="0 0 260 360" fill="none" class="garment-svg">
+    <!-- ── Product 1 ── -->
+    <article class="product-card reveal">
+      <div class="pc-img">
+        <!-- Structured placeholder with garment illustration -->
+        <div class="pc-placeholder pc-p1">
+          <svg viewBox="0 0 240 300" fill="none" class="pc-garment">
             <defs>
-              <linearGradient id="p1g" x1="0" y1="0" x2="260" y2="360" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#2c2110"/><stop offset="100%" stop-color="#0e0b04"/>
+              <linearGradient id="c1" x1="0" y1="0" x2="240" y2="300" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2e2214"/><stop offset="100%" stop-color="#100c04"/>
               </linearGradient>
-              <linearGradient id="p1s" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-                <stop offset="0%" stop-color="rgba(212,175,55,0.2)"/><stop offset="100%" stop-color="transparent"/>
-              </linearGradient>
-              <filter id="ps1"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="rgba(0,0,0,0.9)"/></filter>
+              <filter id="f1"><feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="rgba(0,0,0,0.9)"/></filter>
             </defs>
-            <path d="M 88 36 Q 108 22 130 20 Q 152 22 172 36 L 208 66 L 218 330 L 42 330 L 52 66 Z" fill="url(#p1g)" stroke="rgba(212,175,55,0.22)" stroke-width="1" filter="url(#ps1)"/>
-            <path d="M 100 38 L 112 8 Q 120 0 130 0 Q 140 0 148 8 L 160 38 Q 148 30 130 29 Q 112 30 100 38Z" fill="#1c1408" stroke="rgba(212,175,55,0.18)" stroke-width="0.8"/>
-            <path d="M 88 50 L 8 165 L 2 270 L 42 278 L 48 172 L 88 95 Z" fill="url(#p1g)" stroke="rgba(212,175,55,0.12)" stroke-width="0.8"/>
-            <path d="M 172 50 L 252 165 L 258 270 L 218 278 L 212 172 L 172 95 Z" fill="url(#p1g)" stroke="rgba(212,175,55,0.12)" stroke-width="0.8"/>
-            <path d="M 88 36 Q 105 28 125 27 L 125 330 L 42 330 L 52 66 Z" fill="url(#p1s)"/>
-            <!-- Zip -->
-            <line x1="130" y1="38" x2="130" y2="330" stroke="rgba(212,175,55,0.1)" stroke-width="1"/>
-            <rect x="125" y="48" width="10" height="14" rx="1" fill="rgba(212,175,55,0.35)" stroke="rgba(212,175,55,0.6)" stroke-width="0.7"/>
-            <!-- Construction -->
-            <line x1="50" y1="148" x2="210" y2="148" stroke="rgba(212,175,55,0.12)" stroke-width="0.6"/>
-            <line x1="50" y1="240" x2="210" y2="240" stroke="rgba(212,175,55,0.06)" stroke-width="0.6"/>
-            <line x1="66" y1="200" x2="118" y2="200" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
-            <line x1="142" y1="200" x2="194" y2="200" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
-          </svg>
-          <div class="pcard-badge">New</div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-ref">XEX-001</span>
-            <span class="pcard-tag">SS26</span>
-          </div>
-          <h3 class="pcard-name">Void Jacket</h3>
-          <div class="pcard-foot">
-            <span class="pcard-price">$420</span>
-            <span class="pcard-buy">Buy Now →</span>
-          </div>
-        </div>
-      </a>
-    </article>
-
-    <!-- CARD 2 -->
-    <article class="pcard reveal r-delay-1">
-      <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="pcard-link" aria-label="Buy Zero Hoodie">
-        <div class="pcard-img">
-          <div class="pcard-glow"></div>
-          <svg viewBox="0 0 220 290" fill="none" class="garment-svg">
-            <defs>
-              <linearGradient id="p2g" x1="0" y1="0" x2="220" y2="290" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#251c0e"/><stop offset="100%" stop-color="#0c0904"/>
-              </linearGradient>
-              <filter id="ps2"><feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="rgba(0,0,0,0.88)"/></filter>
-            </defs>
-            <path d="M 74 38 Q 92 26 110 24 Q 128 26 146 38 L 168 60 L 176 260 L 44 260 L 52 60 Z" fill="url(#p2g)" stroke="rgba(212,175,55,0.2)" stroke-width="0.8" filter="url(#ps2)"/>
-            <path d="M 84 40 Q 92 12 110 10 Q 128 12 136 40 Q 128 34 110 33 Q 92 34 84 40Z" fill="#1a1208" stroke="rgba(212,175,55,0.15)" stroke-width="0.8"/>
-            <ellipse cx="110" cy="33" rx="11" ry="12" fill="rgba(0,0,0,0.45)"/>
-            <path d="M 74 48 L 14 138 L 10 210 L 40 215 L 44 146 L 74 86 Z" fill="url(#p2g)" stroke="rgba(212,175,55,0.1)" stroke-width="0.7"/>
-            <path d="M 146 48 L 206 138 L 210 210 L 180 215 L 176 146 L 146 86 Z" fill="url(#p2g)" stroke="rgba(212,175,55,0.1)" stroke-width="0.7"/>
-            <path d="M 92 42 Q 100 56 110 58 Q 120 56 128 42" stroke="rgba(212,175,55,0.3)" stroke-width="0.9" fill="none"/>
-            <path d="M 62 172 Q 62 200 110 202 Q 158 200 158 172" stroke="rgba(212,175,55,0.1)" stroke-width="0.7" fill="none"/>
-            <line x1="110" y1="40" x2="110" y2="260" stroke="rgba(212,175,55,0.06)" stroke-width="0.7" stroke-dasharray="4 8"/>
-          </svg>
-          <div class="pcard-badge pcard-badge--ltd">Ltd</div>
-        </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-ref">XEX-002</span>
-            <span class="pcard-tag">SS26</span>
-          </div>
-          <h3 class="pcard-name">Zero Hoodie</h3>
-          <div class="pcard-foot">
-            <span class="pcard-price">$280</span>
-            <span class="pcard-buy">Buy Now →</span>
-          </div>
-        </div>
-      </a>
-    </article>
-
-    <!-- CARD 3 -->
-    <article class="pcard reveal r-delay-2">
-      <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="pcard-link" aria-label="Buy Signal Tee">
-        <div class="pcard-img">
-          <div class="pcard-glow"></div>
-          <svg viewBox="0 0 200 240" fill="none" class="garment-svg">
-            <defs>
-              <linearGradient id="p3g" x1="0" y1="0" x2="200" y2="240" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#221a0c"/><stop offset="100%" stop-color="#0a0804"/>
-              </linearGradient>
-              <filter id="ps3"><feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="rgba(0,0,0,0.85)"/></filter>
-            </defs>
-            <path d="M 54 28 Q 74 16 100 14 Q 126 16 146 28 L 178 55 L 168 60 L 160 48 L 158 222 L 42 222 L 40 48 L 32 60 L 22 55 Z" fill="url(#p3g)" stroke="rgba(212,175,55,0.18)" stroke-width="0.8" filter="url(#ps3)"/>
-            <path d="M 78 30 Q 88 10 100 8 Q 112 10 122 30 Q 113 24 100 23 Q 87 24 78 30Z" fill="#18120a" stroke="rgba(212,175,55,0.12)" stroke-width="0.7"/>
-            <line x1="42" y1="112" x2="158" y2="112" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
-            <line x1="42" y1="210" x2="158" y2="210" stroke="rgba(212,175,55,0.06)" stroke-width="0.7"/>
-            <rect x="90" y="18" width="20" height="9" rx="0.5" fill="rgba(212,175,55,0.1)" stroke="rgba(212,175,55,0.2)" stroke-width="0.5"/>
+            <path d="M 82 34 Q 100 20 120 18 Q 140 20 158 34 L 196 62 L 206 272 L 34 272 L 44 62 Z"
+                  fill="url(#c1)" stroke="rgba(212,175,55,0.3)" stroke-width="1.2" filter="url(#f1)"/>
+            <path d="M 94 36 L 105 8 Q 112 0 120 0 Q 128 0 135 8 L 146 36 Q 136 29 120 28 Q 104 29 94 36Z"
+                  fill="#1e1408" stroke="rgba(212,175,55,0.22)" stroke-width="0.9"/>
+            <path d="M 82 46 L 10 150 L 5 232 L 38 239 L 43 158 L 82 88 Z"
+                  fill="url(#c1)" stroke="rgba(212,175,55,0.15)" stroke-width="0.8"/>
+            <path d="M 158 46 L 230 150 L 235 232 L 202 239 L 197 158 L 158 88 Z"
+                  fill="url(#c1)" stroke="rgba(212,175,55,0.15)" stroke-width="0.8"/>
+            <line x1="120" y1="38" x2="120" y2="272" stroke="rgba(212,175,55,0.08)" stroke-width="0.8" stroke-dasharray="5 9"/>
+            <rect x="115" y="46" width="10" height="13" rx="1" fill="rgba(212,175,55,0.4)" stroke="rgba(212,175,55,0.7)" stroke-width="0.7"/>
+            <line x1="44" y1="130" x2="196" y2="130" stroke="rgba(212,175,55,0.14)" stroke-width="0.6"/>
+            <line x1="60" y1="180" x2="110" y2="180" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
+            <line x1="130" y1="180" x2="180" y2="180" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
           </svg>
         </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-ref">XEX-003</span>
-            <span class="pcard-tag">SS26</span>
-          </div>
-          <h3 class="pcard-name">Signal Tee</h3>
-          <div class="pcard-foot">
-            <span class="pcard-price">$95</span>
-            <span class="pcard-buy">Buy Now →</span>
-          </div>
+        <div class="pc-badge pc-badge-new">New</div>
+        <div class="pc-overlay">
+          <a href="#" class="pc-quick">Buy Now</a>
         </div>
-      </a>
+      </div>
+      <div class="pc-info">
+        <div class="pc-top">
+          <span class="pc-sku">XEX-001</span>
+          <span class="pc-season">SS26</span>
+        </div>
+        <h3 class="pc-name">Void Jacket</h3>
+        <div class="pc-bottom">
+          <span class="pc-price">₦680,000</span>
+          <a href="#" class="pc-btn">Buy Now</a>
+        </div>
+      </div>
     </article>
 
-    <!-- CARD 4 -->
-    <article class="pcard reveal r-delay-1">
-      <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="pcard-link" aria-label="Buy Frame Cargo">
-        <div class="pcard-img">
-          <div class="pcard-glow"></div>
-          <svg viewBox="0 0 190 290" fill="none" class="garment-svg">
+    <!-- ── Product 2 ── -->
+    <article class="product-card reveal rd1">
+      <div class="pc-img">
+        <div class="pc-placeholder pc-p2">
+          <svg viewBox="0 0 220 270" fill="none" class="pc-garment">
             <defs>
-              <linearGradient id="p4g" x1="0" y1="0" x2="190" y2="290" gradientUnits="userSpaceOnUse">
+              <linearGradient id="c2" x1="0" y1="0" x2="220" y2="270" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#28180c"/><stop offset="100%" stop-color="#0e0804"/>
+              </linearGradient>
+              <filter id="f2"><feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="rgba(0,0,0,0.88)"/></filter>
+            </defs>
+            <path d="M 72 36 Q 90 24 110 22 Q 130 24 148 36 L 170 56 L 178 240 L 42 240 L 50 56 Z"
+                  fill="url(#c2)" stroke="rgba(212,175,55,0.25)" stroke-width="1" filter="url(#f2)"/>
+            <path d="M 82 38 Q 90 10 110 8 Q 130 10 138 38 Q 129 32 110 31 Q 91 32 82 38Z"
+                  fill="#1c1208" stroke="rgba(212,175,55,0.18)" stroke-width="0.8"/>
+            <ellipse cx="110" cy="31" rx="12" ry="13" fill="rgba(0,0,0,0.5)"/>
+            <path d="M 72 46 L 10 136 L 6 208 L 38 214 L 42 144 L 72 82 Z"
+                  fill="url(#c2)" stroke="rgba(212,175,55,0.12)" stroke-width="0.8"/>
+            <path d="M 148 46 L 210 136 L 214 208 L 182 214 L 178 144 L 148 82 Z"
+                  fill="url(#c2)" stroke="rgba(212,175,55,0.12)" stroke-width="0.8"/>
+            <path d="M 90 40 Q 100 54 110 56 Q 120 54 130 40" stroke="rgba(212,175,55,0.4)" stroke-width="1.1" fill="none"/>
+            <path d="M 60 162 Q 60 192 110 194 Q 160 192 160 162" stroke="rgba(212,175,55,0.12)" stroke-width="0.8" fill="none"/>
+            <line x1="110" y1="38" x2="110" y2="240" stroke="rgba(212,175,55,0.06)" stroke-width="0.7" stroke-dasharray="4 8"/>
+          </svg>
+        </div>
+        <div class="pc-badge pc-badge-ltd">Ltd</div>
+        <div class="pc-overlay">
+          <a href="#" class="pc-quick">Buy Now</a>
+        </div>
+      </div>
+      <div class="pc-info">
+        <div class="pc-top">
+          <span class="pc-sku">XEX-002</span>
+          <span class="pc-season">SS26</span>
+        </div>
+        <h3 class="pc-name">Zero Hoodie</h3>
+        <div class="pc-bottom">
+          <span class="pc-price">₦450,000</span>
+          <a href="#" class="pc-btn">Buy Now</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Product 3 ── -->
+    <article class="product-card reveal rd2">
+      <div class="pc-img">
+        <div class="pc-placeholder pc-p3">
+          <svg viewBox="0 0 200 230" fill="none" class="pc-garment">
+            <defs>
+              <linearGradient id="c3" x1="0" y1="0" x2="200" y2="230" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#241a0a"/><stop offset="100%" stop-color="#0c0804"/>
+              </linearGradient>
+              <filter id="f3"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="rgba(0,0,0,0.85)"/></filter>
+            </defs>
+            <path d="M 52 26 Q 72 14 100 12 Q 128 14 148 26 L 180 52 L 170 57 L 162 44 L 160 206 L 40 206 L 38 44 L 30 57 L 20 52 Z"
+                  fill="url(#c3)" stroke="rgba(212,175,55,0.22)" stroke-width="0.9" filter="url(#f3)"/>
+            <path d="M 76 28 Q 86 8 100 6 Q 114 8 124 28 Q 114 22 100 21 Q 86 22 76 28Z"
+                  fill="#1a1208" stroke="rgba(212,175,55,0.15)" stroke-width="0.7"/>
+            <line x1="40" y1="106" x2="160" y2="106" stroke="rgba(212,175,55,0.12)" stroke-width="0.6"/>
+            <line x1="40" y1="194" x2="160" y2="194" stroke="rgba(212,175,55,0.06)" stroke-width="0.6"/>
+            <rect x="88" y="16" width="24" height="10" rx="0.5" fill="rgba(212,175,55,0.12)" stroke="rgba(212,175,55,0.25)" stroke-width="0.6"/>
+            <text x="100" y="155" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="rgba(212,175,55,0.15)" letter-spacing="6">XEX</text>
+          </svg>
+        </div>
+        <div class="pc-overlay">
+          <a href="#" class="pc-quick">Buy Now</a>
+        </div>
+      </div>
+      <div class="pc-info">
+        <div class="pc-top">
+          <span class="pc-sku">XEX-003</span>
+          <span class="pc-season">SS26</span>
+        </div>
+        <h3 class="pc-name">Signal Tee</h3>
+        <div class="pc-bottom">
+          <span class="pc-price">₦155,000</span>
+          <a href="#" class="pc-btn">Buy Now</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Product 4 ── -->
+    <article class="product-card reveal rd1">
+      <div class="pc-img">
+        <div class="pc-placeholder pc-p4">
+          <svg viewBox="0 0 190 270" fill="none" class="pc-garment">
+            <defs>
+              <linearGradient id="c4" x1="0" y1="0" x2="190" y2="270" gradientUnits="userSpaceOnUse">
                 <stop offset="0%" stop-color="#201808"/><stop offset="100%" stop-color="#0a0804"/>
               </linearGradient>
-              <filter id="ps4"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="rgba(0,0,0,0.88)"/></filter>
+              <filter id="f4"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="rgba(0,0,0,0.88)"/></filter>
             </defs>
-            <rect x="32" y="14" width="126" height="24" rx="1" fill="#181208" stroke="rgba(212,175,55,0.2)" stroke-width="0.8"/>
-            <path d="M 32 36 L 40 254 L 93 260 L 97 36 Z" fill="url(#p4g)" stroke="rgba(212,175,55,0.14)" stroke-width="0.7" filter="url(#ps4)"/>
-            <path d="M 97 36 L 93 260 L 150 254 L 158 36 Z" fill="url(#p4g)" stroke="rgba(212,175,55,0.14)" stroke-width="0.7"/>
-            <path d="M 40 36 Q 72 72 95 72 Q 118 72 150 36" stroke="rgba(212,175,55,0.1)" stroke-width="0.7" fill="none"/>
-            <!-- Cargo pockets -->
-            <rect x="44" y="104" width="44" height="55" rx="1" fill="rgba(212,175,55,0.04)" stroke="rgba(212,175,55,0.16)" stroke-width="0.7"/>
-            <line x1="44" y1="120" x2="88" y2="120" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
-            <rect x="102" y="104" width="44" height="55" rx="1" fill="rgba(212,175,55,0.04)" stroke="rgba(212,175,55,0.16)" stroke-width="0.7"/>
-            <line x1="102" y1="120" x2="146" y2="120" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
-            <!-- Belt loops -->
-            <rect x="50" y="12" width="7" height="14" rx="0.5" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.18)" stroke-width="0.5"/>
-            <rect x="88" y="12" width="7" height="14" rx="0.5" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.18)" stroke-width="0.5"/>
-            <rect x="125" y="12" width="7" height="14" rx="0.5" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.18)" stroke-width="0.5"/>
+            <rect x="30" y="12" width="130" height="24" rx="1" fill="#181208" stroke="rgba(212,175,55,0.25)" stroke-width="0.9"/>
+            <path d="M 30 34 L 38 240 L 92 246 L 96 34 Z" fill="url(#c4)" stroke="rgba(212,175,55,0.16)" stroke-width="0.8" filter="url(#f4)"/>
+            <path d="M 96 34 L 92 246 L 148 240 L 156 34 Z" fill="url(#c4)" stroke="rgba(212,175,55,0.16)" stroke-width="0.8"/>
+            <path d="M 38 34 Q 70 68 93 68 Q 116 68 148 34" stroke="rgba(212,175,55,0.12)" stroke-width="0.8" fill="none"/>
+            <rect x="42" y="98"  width="42" height="52" rx="1" fill="rgba(212,175,55,0.04)" stroke="rgba(212,175,55,0.2)" stroke-width="0.7"/>
+            <line x1="42" y1="115" x2="84"  y2="115" stroke="rgba(212,175,55,0.12)" stroke-width="0.6"/>
+            <rect x="100" y="98" width="42" height="52" rx="1" fill="rgba(212,175,55,0.04)" stroke="rgba(212,175,55,0.2)" stroke-width="0.7"/>
+            <line x1="100" y1="115" x2="142" y2="115" stroke="rgba(212,175,55,0.12)" stroke-width="0.6"/>
+            <rect x="48" y="10" width="7" height="14" rx="0.5" fill="rgba(212,175,55,0.1)" stroke="rgba(212,175,55,0.22)" stroke-width="0.5"/>
+            <rect x="88" y="10" width="7" height="14" rx="0.5" fill="rgba(212,175,55,0.1)" stroke="rgba(212,175,55,0.22)" stroke-width="0.5"/>
+            <rect x="128" y="10" width="7" height="14" rx="0.5" fill="rgba(212,175,55,0.1)" stroke="rgba(212,175,55,0.22)" stroke-width="0.5"/>
           </svg>
-          <div class="pcard-badge pcard-badge--ltd">Ltd</div>
         </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-ref">XEX-004</span>
-            <span class="pcard-tag">SS26</span>
-          </div>
-          <h3 class="pcard-name">Frame Cargo</h3>
-          <div class="pcard-foot">
-            <span class="pcard-price">$340</span>
-            <span class="pcard-buy">Buy Now →</span>
-          </div>
+        <div class="pc-badge pc-badge-ltd">Ltd</div>
+        <div class="pc-overlay">
+          <a href="#" class="pc-quick">Buy Now</a>
         </div>
-      </a>
+      </div>
+      <div class="pc-info">
+        <div class="pc-top">
+          <span class="pc-sku">XEX-004</span>
+          <span class="pc-season">SS26</span>
+        </div>
+        <h3 class="pc-name">Frame Cargo</h3>
+        <div class="pc-bottom">
+          <span class="pc-price">₦550,000</span>
+          <a href="#" class="pc-btn">Buy Now</a>
+        </div>
+      </div>
     </article>
 
-    <!-- CARD 5 -->
-    <article class="pcard reveal r-delay-2">
-      <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="pcard-link" aria-label="Buy Null Coach">
-        <div class="pcard-img">
-          <div class="pcard-glow"></div>
-          <svg viewBox="0 0 220 250" fill="none" class="garment-svg">
+    <!-- ── Product 5 ── -->
+    <article class="product-card reveal rd2">
+      <div class="pc-img">
+        <div class="pc-placeholder pc-p5">
+          <svg viewBox="0 0 220 240" fill="none" class="pc-garment">
             <defs>
-              <linearGradient id="p5g" x1="0" y1="0" x2="220" y2="250" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#221a0a"/><stop offset="100%" stop-color="#0c0904"/>
+              <linearGradient id="c5" x1="0" y1="0" x2="220" y2="240" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#22180a"/><stop offset="100%" stop-color="#0c0904"/>
               </linearGradient>
-              <filter id="ps5"><feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="rgba(0,0,0,0.85)"/></filter>
+              <filter id="f5"><feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="rgba(0,0,0,0.85)"/></filter>
             </defs>
-            <path d="M 74 30 Q 92 18 110 16 Q 128 18 146 30 L 176 54 L 180 222 L 40 222 L 44 54 Z" fill="url(#p5g)" stroke="rgba(212,175,55,0.2)" stroke-width="0.8" filter="url(#ps5)"/>
-            <rect x="74" y="16" width="72" height="20" rx="0" fill="#161208" stroke="rgba(212,175,55,0.18)" stroke-width="0.7"/>
-            <path d="M 74 38 L 14 128 L 10 188 L 38 193 L 42 134 L 74 76 Z" fill="url(#p5g)" stroke="rgba(212,175,55,0.1)" stroke-width="0.7"/>
-            <path d="M 146 38 L 206 128 L 210 188 L 182 193 L 178 134 L 146 76 Z" fill="url(#p5g)" stroke="rgba(212,175,55,0.1)" stroke-width="0.7"/>
-            <line x1="110" y1="36" x2="110" y2="222" stroke="rgba(212,175,55,0.08)" stroke-width="1"/>
-            <!-- Rib bands -->
-            <rect x="10" y="188" width="28" height="16" rx="0" fill="#141008" stroke="rgba(212,175,55,0.12)" stroke-width="0.6"/>
-            <rect x="182" y="188" width="28" height="16" rx="0" fill="#141008" stroke="rgba(212,175,55,0.12)" stroke-width="0.6"/>
-            <rect x="44" y="210" width="132" height="16" rx="0" fill="#141008" stroke="rgba(212,175,55,0.12)" stroke-width="0.6"/>
-            <line x1="46" y1="130" x2="174" y2="130" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
+            <path d="M 72 28 Q 90 16 110 14 Q 130 16 148 28 L 178 52 L 182 212 L 38 212 L 42 52 Z"
+                  fill="url(#c5)" stroke="rgba(212,175,55,0.22)" stroke-width="0.9" filter="url(#f5)"/>
+            <rect x="72" y="14" width="76" height="20" rx="0" fill="#161208" stroke="rgba(212,175,55,0.2)" stroke-width="0.8"/>
+            <path d="M 72 36 L 10 120 L 6 180 L 36 185 L 40 128 L 72 72 Z" fill="url(#c5)" stroke="rgba(212,175,55,0.12)" stroke-width="0.7"/>
+            <path d="M 148 36 L 210 120 L 214 180 L 184 185 L 180 128 L 148 72 Z" fill="url(#c5)" stroke="rgba(212,175,55,0.12)" stroke-width="0.7"/>
+            <line x1="110" y1="34" x2="110" y2="212" stroke="rgba(212,175,55,0.07)" stroke-width="0.8"/>
+            <rect x="8"  y="180" width="28" height="15" rx="0" fill="#141008" stroke="rgba(212,175,55,0.14)" stroke-width="0.6"/>
+            <rect x="184" y="180" width="28" height="15" rx="0" fill="#141008" stroke="rgba(212,175,55,0.14)" stroke-width="0.6"/>
+            <rect x="42" y="200" width="136" height="15" rx="0" fill="#141008" stroke="rgba(212,175,55,0.14)" stroke-width="0.6"/>
+            <line x1="44" y1="124" x2="176" y2="124" stroke="rgba(212,175,55,0.1)" stroke-width="0.6"/>
           </svg>
         </div>
-        <div class="pcard-body">
-          <div class="pcard-meta">
-            <span class="pcard-ref">XEX-005</span>
-            <span class="pcard-tag">SS26</span>
-          </div>
-          <h3 class="pcard-name">Null Coach</h3>
-          <div class="pcard-foot">
-            <span class="pcard-price">$310</span>
-            <span class="pcard-buy">Buy Now →</span>
-          </div>
+        <div class="pc-overlay">
+          <a href="#" class="pc-quick">Buy Now</a>
         </div>
-      </a>
+      </div>
+      <div class="pc-info">
+        <div class="pc-top">
+          <span class="pc-sku">XEX-005</span>
+          <span class="pc-season">SS26</span>
+        </div>
+        <h3 class="pc-name">Null Coach</h3>
+        <div class="pc-bottom">
+          <span class="pc-price">₦500,000</span>
+          <a href="#" class="pc-btn">Buy Now</a>
+        </div>
+      </div>
     </article>
 
-  </div><!-- /product-grid -->
+    <!-- ── Product 6 — Accessory ── -->
+    <article class="product-card reveal rd3">
+      <div class="pc-img">
+        <div class="pc-placeholder pc-p6">
+          <svg viewBox="0 0 180 180" fill="none" class="pc-garment">
+            <defs>
+              <linearGradient id="c6" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2a2010"/><stop offset="100%" stop-color="#0e0c04"/>
+              </linearGradient>
+              <filter id="f6"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="rgba(0,0,0,0.85)"/></filter>
+            </defs>
+            <!-- Cap brim -->
+            <path d="M 30 110 Q 90 82 150 110 L 158 118 Q 90 96 22 118 Z" fill="url(#c6)" stroke="rgba(212,175,55,0.22)" stroke-width="0.9"/>
+            <!-- Cap dome -->
+            <path d="M 30 110 Q 28 60 90 48 Q 152 60 150 110 Z" fill="url(#c6)" stroke="rgba(212,175,55,0.22)" stroke-width="0.9" filter="url(#f6)"/>
+            <!-- Panel seams -->
+            <path d="M 90 48 Q 90 80 90 110" stroke="rgba(212,175,55,0.12)" stroke-width="0.7"/>
+            <path d="M 54 54 Q 72 80 80 110" stroke="rgba(212,175,55,0.08)" stroke-width="0.6"/>
+            <path d="M 126 54 Q 108 80 100 110" stroke="rgba(212,175,55,0.08)" stroke-width="0.6"/>
+            <!-- Button on top -->
+            <circle cx="90" cy="50" r="5" fill="#1e1808" stroke="rgba(212,175,55,0.4)" stroke-width="0.8"/>
+            <!-- XEX logo -->
+            <text x="90" y="90" text-anchor="middle" font-family="Bebas Neue" font-size="16" fill="rgba(212,175,55,0.35)" letter-spacing="5">XEX</text>
+            <!-- Strap -->
+            <rect x="75" y="110" width="30" height="10" rx="1" fill="#181208" stroke="rgba(212,175,55,0.2)" stroke-width="0.7"/>
+          </svg>
+        </div>
+        <div class="pc-badge pc-badge-new">New</div>
+        <div class="pc-overlay">
+          <a href="#" class="pc-quick">Buy Now</a>
+        </div>
+      </div>
+      <div class="pc-info">
+        <div class="pc-top">
+          <span class="pc-sku">XEX-006</span>
+          <span class="pc-season">SS26</span>
+        </div>
+        <h3 class="pc-name">Signal Cap</h3>
+        <div class="pc-bottom">
+          <span class="pc-price">₦85,000</span>
+          <a href="#" class="pc-btn">Buy Now</a>
+        </div>
+      </div>
+    </article>
+
+  </div><!-- /shop-grid -->
 </section>
 
-<!-- ▓▓ DIVIDER ▓▓ -->
-<div class="gold-divider reveal">
-  <div class="gd-line"></div>
-  <div class="gd-diamond">◈</div>
-  <div class="gd-line"></div>
+<!-- ═══════════════════════════════════════
+     BRAND STRIP
+═══════════════════════════════════════ -->
+<div class="brand-strip reveal">
+  <div class="bs-inner">
+    <div class="bs-stat"><strong>SS26</strong><span>Current Drop</span></div>
+    <div class="bs-line"></div>
+    <div class="bs-stat"><strong>6</strong><span>Pieces Available</span></div>
+    <div class="bs-line"></div>
+    <div class="bs-stat"><strong>0</strong><span>Restocks Ever</span></div>
+    <div class="bs-line"></div>
+    <div class="bs-stat"><strong>Lagos</strong><span>Born & Based</span></div>
+  </div>
 </div>
 
-<!-- ▓▓ MANIFESTO ▓▓ -->
-<section id="manifesto">
-  <div class="manifesto-inner">
-    <p class="manifesto-kicker reveal">Our Philosophy</p>
-    <h2 class="manifesto-text">
-      <span class="mt-line reveal">We build for</span>
-      <span class="mt-line mt-italic reveal r-delay-1">those who see</span>
-      <span class="mt-line reveal r-delay-2">further.</span>
-    </h2>
-    <div class="manifesto-body reveal r-delay-3">
-      <p>Every XEX piece is engineered in silence. Small batches. Zero excess. No restock. We refuse to produce more than the world needs. Each garment is a considered object — built once, worn forever.</p>
-      <div class="manifesto-stats">
-        <div class="ms">
-          <strong>12</strong>
-          <span>Pieces per drop</span>
-        </div>
-        <div class="ms-divider">◈</div>
-        <div class="ms">
-          <strong>4</strong>
-          <span>Drops per year</span>
-        </div>
-        <div class="ms-divider">◈</div>
-        <div class="ms">
-          <strong>0</strong>
-          <span>Restocks. Ever.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ▓▓ COLLECTIONS ▓▓ -->
+<!-- ═══════════════════════════════════════
+     COLLECTIONS
+═══════════════════════════════════════ -->
 <section id="collections">
-  <div class="section-intro reveal">
-    <div class="section-label">Archive</div>
-    <h2 class="section-heading">Collections</h2>
-    <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="section-more">
-      Shop All
-      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
-    </a>
+  <div class="coll-header reveal">
+    <p class="sh-label">Archive</p>
+    <h2 class="sh-title">Collections</h2>
   </div>
 
-  <div class="coll-rail">
-    <div class="coll-track" id="collTrack">
+  <div class="coll-scroll">
+    <div class="coll-row">
 
-      <div class="coll-item coll-live reveal">
-        <div class="ci-year">2026</div>
-        <div class="ci-num">SS</div>
-        <div class="ci-info">
-          <p class="ci-season">SS26 — Live Now</p>
-          <h3 class="ci-name">System Zero</h3>
-          <p class="ci-count">12 Pieces Available</p>
-        </div>
-        <a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer" class="ci-btn">Shop →</a>
-        <div class="ci-bar"></div>
+      <div class="coll-card cc-live reveal">
+        <div class="cc-season">SS26 — Live Now</div>
+        <div class="cc-name">System Zero</div>
+        <div class="cc-count">6 Pieces</div>
+        <a href="#shop" class="cc-link">Shop →</a>
+        <div class="cc-bar"></div>
       </div>
 
-      <div class="coll-item reveal r-delay-1">
-        <div class="ci-year">2025</div>
-        <div class="ci-num">FW</div>
-        <div class="ci-info">
-          <p class="ci-season">FW25</p>
-          <h3 class="ci-name">Dark Matter</h3>
-          <p class="ci-count">10 Pieces — Sold Out</p>
-        </div>
-        <div class="ci-bar"></div>
+      <div class="coll-card reveal rd1">
+        <div class="cc-season">FW25</div>
+        <div class="cc-name">Dark Matter</div>
+        <div class="cc-count">Sold Out</div>
+        <div class="cc-bar"></div>
       </div>
 
-      <div class="coll-item reveal r-delay-2">
-        <div class="ci-year">2025</div>
-        <div class="ci-num">SS</div>
-        <div class="ci-info">
-          <p class="ci-season">SS25</p>
-          <h3 class="ci-name">Ghost Protocol</h3>
-          <p class="ci-count">8 Pieces — Sold Out</p>
-        </div>
-        <div class="ci-bar"></div>
+      <div class="coll-card reveal rd2">
+        <div class="cc-season">SS25</div>
+        <div class="cc-name">Ghost Protocol</div>
+        <div class="cc-count">Sold Out</div>
+        <div class="cc-bar"></div>
       </div>
 
-      <div class="coll-item reveal r-delay-3">
-        <div class="ci-year">2024</div>
-        <div class="ci-num">FW</div>
-        <div class="ci-info">
-          <p class="ci-season">FW24</p>
-          <h3 class="ci-name">Null Point</h3>
-          <p class="ci-count">14 Pieces — Sold Out</p>
-        </div>
-        <div class="ci-bar"></div>
+      <div class="coll-card reveal rd3">
+        <div class="cc-season">FW24</div>
+        <div class="cc-name">Null Point</div>
+        <div class="cc-count">Sold Out</div>
+        <div class="cc-bar"></div>
       </div>
 
-      <div class="coll-item reveal r-delay-4">
-        <div class="ci-year">2023</div>
-        <div class="ci-num">I</div>
-        <div class="ci-info">
-          <p class="ci-season">Debut</p>
-          <h3 class="ci-name">Origin</h3>
-          <p class="ci-count">6 Pieces — Sold Out</p>
-        </div>
-        <div class="ci-bar"></div>
+      <div class="coll-card reveal rd4">
+        <div class="cc-season">Debut 2023</div>
+        <div class="cc-name">Origin</div>
+        <div class="cc-count">Sold Out</div>
+        <div class="cc-bar"></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ▓▓ SIGNAL / EMAIL ▓▓ -->
+<!-- ═══════════════════════════════════════
+     EMAIL SIGNUP
+═══════════════════════════════════════ -->
 <section id="signal">
-  <div class="signal-inner reveal">
-    <div class="gold-divider" style="margin-bottom:3rem">
-      <div class="gd-line"></div><div class="gd-diamond">◈</div><div class="gd-line"></div>
+  <div class="signal-wrap reveal">
+    <p class="sig-label">Early Access</p>
+    <h2 class="sig-title">Be First to Every Drop</h2>
+    <p class="sig-sub">Join the XEX signal. No spam — just drops.</p>
+    <div class="sig-form">
+      <input type="email" class="sig-input" placeholder="your@email.com" autocomplete="email">
+      <button class="sig-btn" id="sig-submit"><span>Join</span></button>
     </div>
-    <h2 class="signal-heading">Early Access</h2>
-    <p class="signal-sub">First to every drop. No noise. Just signal.</p>
-    <div class="signal-form">
-      <input type="email" class="signal-input" placeholder="your@email.com">
-      <button class="signal-btn"><span>Subscribe</span></button>
-    </div>
-    <p class="signal-note">No spam. Unsubscribe anytime.</p>
+    <p class="sig-note">Free to join. Unsubscribe anytime.</p>
   </div>
 </section>
 
-<!-- ▓▓ FOOTER ▓▓ -->
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
 <footer>
   <div class="footer-top reveal">
+
     <div class="ft-brand">
-      <div class="ft-wordmark">XEX</div>
-      <p class="ft-tagline">Future Wear.<br>Limited Drops.<br>No Restock.</p>
+      <!-- Footer wordmark — large, bold -->
+      <svg class="ft-logo" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,0 10,0 36,40 26,40"  fill="#d4af37"/>
+        <polygon points="26,0 36,0 10,40 0,40"  fill="#d4af37"/>
+        <polygon points="15,19 18,15 21,19 18,23" fill="#050403"/>
+        <rect x="44" y="0" width="8"  height="40" fill="#d4af37"/>
+        <rect x="44" y="0" width="40" height="8"  fill="#d4af37"/>
+        <rect x="44" y="16" width="30" height="8" fill="#d4af37"/>
+        <rect x="44" y="32" width="40" height="8" fill="#d4af37"/>
+        <polygon points="92,0 102,0 128,40 118,40" fill="#d4af37"/>
+        <polygon points="118,0 128,0 102,40 92,40" fill="#d4af37"/>
+        <polygon points="107,19 110,15 113,19 110,23" fill="#050403"/>
+      </svg>
+      <p class="ft-tag">Future Wear.<br>Limited Drops.<br>No Restock. No Apologies.</p>
+      <a href="https://instagram.com/xtraechoxone2026" target="_blank" rel="noopener noreferrer" class="ft-ig">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        @xtraechoxone2026
+      </a>
     </div>
+
     <div class="ft-col">
       <h4>Shop</h4>
       <ul>
-        <li><a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer">SS26 — System Zero</a></li>
-        <li><a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer">Archive</a></li>
-        <li><a href="https://paystack.shop/pay/xex-store" target="_blank" rel="noopener noreferrer">Accessories</a></li>
+        <li><a href="#shop">SS26 — System Zero</a></li>
+        <li><a href="#collections">Archive</a></li>
+        <li><a href="#shop">Accessories</a></li>
       </ul>
     </div>
+
     <div class="ft-col">
-      <h4>Info</h4>
+      <h4>Brand</h4>
       <ul>
-        <li><a href="#">About XEX</a></li>
-        <li><a href="#">Stockists</a></li>
+        <li><button class="ft-link-btn" id="ft-about">About XEX</button></li>
+        <li><a href="https://instagram.com/xtraechoxone2026" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         <li><a href="#">Press</a></li>
       </ul>
     </div>
+
     <div class="ft-col">
       <h4>Support</h4>
       <ul>
-        <li><a href="#">Shipping &amp; Returns</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
         <li><a href="#">Size Guide</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </div>
+
   </div>
+
   <div class="footer-bottom">
-    <span>© 2026 XEX. All rights reserved.</span>
+    <span>© 2026 XEX Extra Xone. All rights reserved.</span>
     <div class="ft-socials">
-      <a href="#">Instagram</a>
-      <a href="#">X</a>
+      <a href="https://instagram.com/xtraechoxone2026" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="#">TikTok</a>
+      <a href="#">X</a>
     </div>
   </div>
 </footer>
